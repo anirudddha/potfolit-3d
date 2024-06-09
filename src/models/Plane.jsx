@@ -1,31 +1,30 @@
 import { useEffect, useRef } from "react";
-
-import planeScene from '../assets/3d/plane.glb';
 import { useGLTF, useAnimations } from "@react-three/drei";
 
-const Plane = ({ isRotating, ...props }) => {
+import planeScene from '../assets/3d/bird.glb';
 
+const Plane = ({ isRotating, ...props }) => {
   const ref = useRef();
-  // Load the 3D model and its animations
   const { scene, animations } = useGLTF(planeScene);
-  // Get animation actions associated with the plane
   const { actions } = useAnimations(animations, ref);
 
-  // Use an effect to control the plane's animation based on 'isRotating'
-  // Note: Animation names can be found on the Sketchfab website where the 3D model is hosted.
   useEffect(() => {
+    const action = actions["Take 001"];
+    action.play();
+    
+    // Set the effective time scale based on isRotating
     if (isRotating) {
-      actions["Take 001"].play();
+      action.setEffectiveTimeScale(1); // Increase speed
     } else {
-      actions["Take 001"].stop();
+      action.setEffectiveTimeScale(0.5); // Decrease speed
     }
   }, [actions, isRotating]);
 
   return (
-    <mesh {...props} ref={ref}>
+    <mesh {...props} ref={ref} scale={0.0013} position={[-0.5, -0.5, 3]} rotation={[Math.PI * 2, Math.PI * 2, Math.PI * 2]}>
       <primitive object={scene} />
     </mesh>
-  )
+  );
 }
 
-export default Plane
+export default Plane;

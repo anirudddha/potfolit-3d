@@ -6,7 +6,7 @@ import birdScene from "../assets/3d/bird.glb";
 
 const Bird = () => {
   const birdRef = useRef();
-
+  
   // Load the 3D model and animations from the provided GLTF file
   const { scene, animations } = useGLTF(birdScene);
 

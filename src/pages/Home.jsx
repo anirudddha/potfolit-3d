@@ -1,16 +1,17 @@
-import React, { useState ,useEffect,useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import Loader from '../componets/Loader'
 import Island from '../models/Island'
-import { OrbitControls } from '@react-three/drei'
 import Bird from '../models/Bird'
 import Plane from '../models/Plane'
 import Sky from '../models/Sky'
 import HomeInfo from '../componets/HomeInfo'
 import { soundoff, soundon } from "../assets/icons";
-
+import Volcano from '../models/Volcano'
 import sakura from "../assets/sakura.mp3";
+import { OrbitControls } from '@react-three/drei'
+import Boat from '../models/Boat'
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura));
@@ -18,8 +19,10 @@ const Home = () => {
   audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(1);
-  const [isRotating ,setIsRotating] = useState(false);
+  const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  const [rotationStarted,setRotationStarted] = useState(false);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -61,25 +64,27 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
-  const [islandScale ,islandPosition,islandrotation] = adjustIslandForScreenSize();
+  const [islandScale, islandPosition, islandrotation] = adjustIslandForScreenSize();
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
 
   return (
     <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+      {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
         {currentStage && <HomeInfo currentStage={currentStage} />}
-      </div>
+      </div> */}
 
-      <Canvas className={`w-full h-screen bg-transparent ${ isRotating ?'cursor-grabbing':'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
+      <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[1,1,1]} intensity={2}/>
-          <ambientLight intensity={0.5}/>
-          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1}/>
+          <directionalLight position={[1, 1, 1]} intensity={2} />
+          <ambientLight intensity={0.5} />
+          <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
           {/* <OrbitControls/> */}
-          <Bird/>
-          <Sky isRotating={isRotating}/>
-          <Island  isRotating={isRotating} setIsRotating={setIsRotating} setCurrentStage={setCurrentStage} position={islandPosition} rotation={[0.1, 4.7077, 0]} scale={islandScale} />
-          <Plane isRotating={isRotating} position={biplanePosition} rotation={[0, 20.1, 0]} scale={biplaneScale} />
+          {/* <Bird rotationStarted={rotationStarted}/> */}
+          <Sky isRotating={isRotating} />
+          <Volcano isRotating={isRotating} setIsRotating={setIsRotating} setCurrentStage={setCurrentStage} position={islandPosition} rotation={[0.1, 4.7077, 0]} scale={islandScale} />
+          <Boat />
+          {/* <Island  isRotating={isRotating} setIsRotating={setIsRotating} setCurrentStage={setCurrentStage} position={islandPosition} rotation={[0.1, 4.7077, 0]} scale={islandScale} />  */}
+          <Plane isRotating={isRotating} />
         </Suspense>
       </Canvas>
       <div className='absolute bottom-2 left-2'>
