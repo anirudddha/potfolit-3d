@@ -14,14 +14,14 @@ const HomeInfo = ({ currentStage }) => {
       </h1>
     );
 
-  if (currentStage === 2) {
+  if (currentStage === 4) {
     return (
       <div className=''>
         <p className='font-medium sm:text-xl text-center'>
           Worked with many coding languages and frameworks <br /> and picked up many skills along the way
         </p>
         <Link to='/about' className='neo-btnn'>
-          Learn more
+          See more
           <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
         </Link>
       </div>
@@ -43,7 +43,7 @@ const HomeInfo = ({ currentStage }) => {
     );
   }
 
-  if (currentStage === 4) {
+  if (currentStage === 2) {
     return (
       <div className=''>
       <p className='font-medium sm:text-xl text-center'>
