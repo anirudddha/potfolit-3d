@@ -11,6 +11,7 @@ import { OrbitControls } from '@react-three/drei'
 import Boat from '../models/Boat'
 
 import Birds_together from '../models/Birds_together'
+import gifImage from '../assets/swipe.gif'; 
 
 const Home = () => {
   // const audioRef = useRef(new Audio(sakura));
@@ -19,7 +20,7 @@ const Home = () => {
 
   const [currentStage, setCurrentStage] = useState(3);
   const [isRotating, setIsRotating] = useState(false);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  // const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
 
   // useEffect(() => {
@@ -32,6 +33,15 @@ const Home = () => {
   //   };
   // }, [isPlayingMusic]);
 
+  const [showGif, setShowGif] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGif(false);
+    }, 5000); // Hide GIF after 3 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
@@ -51,9 +61,17 @@ const Home = () => {
 
   return (
     <section className='w-full h-screen relative'>
+      
+      
       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
+
+      {showGif && (
+        <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center mt-28'>
+          <img src={gifImage} alt='GIF Image' className='max-h-80' />
+        </div>
+      )}
 
       <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
         <Suspense fallback={<Loader />}>
