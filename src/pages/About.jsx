@@ -1,10 +1,9 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 
 import CTA from "../componets/CTA";
 import { experiences, skills } from "../constants";
+
+import leetcode from '../assets/icons/leetcode.png'
+import cf from '../assets/icons/cf.png'
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -13,17 +12,20 @@ const About = () => {
     <section className='max-container'>
       <h1 className='head-text'>
         Hello, I'm{" "}
-        <span className='blue-gradient_text font-semibold drop-shadow'>
+        <span className='' style={{color:"#4157FF",textShadow:"2px 2px black"}}>
           {" "}
           Aniruddha
         </span>{" "}
-        👋
+        
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Electronics and Communication Engineer from Vellore Institute of Technology Chennai.
-        </p>
+          I am currently pursuing a degree in Electronics and Communication Engineering at Vellore Institute of Technology (VIT), Chennai. My academic journey has been marked by a passion for technology and a drive to innovate in the field of electronics and communication.
+          <br /><br />
+          In addition to my academic pursuits, I am an avid competitive programmer. I thrive on solving complex problems and continually enhancing my coding skills through various competitions and coding challenges. My proficiency in algorithms and data structures has been honed through rigorous practice and participation in numerous contests.
+          <br /><br />
+          Moreover, I am a dedicated React developer with a strong foundation in front-end development. I enjoy building dynamic, user-friendly web applications and exploring new frameworks and technologies in the realm of web development. My projects reflect my commitment to creating efficient and visually appealing user interfaces.        </p>
       </div>
 
       <div className='py-10 flex flex-col'>
@@ -44,70 +46,25 @@ const About = () => {
           ))}
         </div>
       </div>
+      <h3 className='subhead-text my-3'>Achivments in CP</h3>
+      <div className="container my-8">
+        <h1 style={{ marginTop: "20px" }}>🔵 <img src={leetcode} style={{ height: "200px", margin: "auto" }} alt="" /> </h1>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto", marginTop: "-30px" }}>Knight on Leetcode </h3></p>
 
-      {/* <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience.</h3>
-        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-          <p>
-            I've worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here's the rundown:
-          </p>
-        </div>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto" }}>Achived in Top 5% on <a href="https://leetcode.com/u/BlackPerl06/" style={{ color: "blue" }}>Leetcode </a> Users  </h3></p>
+      </div>
+      <hr />
+      <div className="container my-8">
+        <h1 style={{ marginTop: "20px" }}>🔵 <img src={cf} style={{ height: "100px", margin: "auto" }} alt="" /> </h1>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto", marginTop: "-5px" }}>Specialist on CodeForces </h3></p>
 
-        <div className='mt-12 flex'>
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <VerticalTimelineElement
-                key={experience.company_name}
-                date={experience.date}
-                iconStyle={{ background: experience.iconBg }}
-                icon={
-                  <div className='flex justify-center items-center w-full h-full'>
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className='w-[60%] h-[60%] object-contain'
-                    />
-                  </div>
-                }
-                contentStyle={{
-                  borderBottom: "8px",
-                  borderStyle: "solid",
-                  borderBottomColor: experience.iconBg,
-                  boxShadow: "none",
-                }}
-              >
-                <div>
-                  <h3 className='text-black text-xl font-poppins font-semibold'>
-                    {experience.title}
-                  </h3>
-                  <p
-                    className='text-black-500 font-medium text-base'
-                    style={{ margin: 0 }}
-                  >
-                    {experience.company_name}
-                  </p>
-                </div>
-
-                <ul className='my-5 list-disc ml-5 space-y-2'>
-                  {experience.points.map((point, index) => (
-                    <li
-                      key={`experience-point-${index}`}
-                      className='text-black-500/50 font-normal pl-1 text-sm'
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
-        </div>
-      </div> */}
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto" }}>Achived in Top 1400+ rating on <a href="https://leetcode.com/u/BlackPerl06/" style={{ color: "blue" }}>CodeForces</a>  </h3></p>
+      </div>
+      <hr />
 
       <hr className='border-slate-200' />
 
-      <CTA />
+      {/* <CTA /> */}
     </section>
   );
 };

@@ -1,52 +1,44 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import boat from '../assets/3d/zefiro.glb';
+import boat from '../assets/3d/skyflux.glb';
 
 const Boat = () => {
     const ref = useRef();
-    const [angle, setAngle] = useState(0);  // Angle in radians
-    const radius = 5;  // Radius of the circular path
+    const angleRef = useRef(0);  // Ref to keep track of the angle
+    const radiusX = 4;  // Radius of the ellipse on the x-axis
+    const radiusZ = 50;  // Radius of the ellipse on the z-axis
 
     // Load the 3D model and its animations
     const { scene, animations } = useGLTF(boat);
-    // Get animation actions associated with the plane
+    // Get animation actions associated with the boat
     const { actions } = useAnimations(animations, ref);
 
-    const handleKeyDown = useCallback((event) => {
-        setAngle((prevAngle) => {
-            switch (event.key) {
-                case 'a':
-                case 'A':
-                    return prevAngle + 0.1;  // Increase angle to move counterclockwise
-                case 'd':
-                case 'D':
-                    return prevAngle - 0.1;  // Decrease angle to move clockwise
-                default:
-                    return prevAngle;
-            }
-        });
-    }, []);
-
     useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [handleKeyDown]);
+        // Play the animation when the component mounts
+        if (actions) {
+            const action = actions["Action"];  // Replace "Action" with the actual name of your animation
+            if (action) {
+                action.play();
+            }
+        }
+    }, [actions]);
 
     useFrame(() => {
-        // Calculate new position based on the angle
-        const x = radius * Math.cos(angle);
-        const z = radius * Math.sin(angle);
-        ref.current.position.set(x, -1.2, z);
+        // Increment the angle
+        angleRef.current += 0.002;
 
-        // Optionally, update rotation to always face outward from the center
-        ref.current.rotation.y = -angle;
+        // Calculate new position based on the angle for elliptical motion
+        const x = radiusX * Math.cos(angleRef.current);
+        const z = radiusZ * Math.sin(angleRef.current);
+        ref.current.position.set(x-5, 2, z); // y-axis (height) is set to 1
+
+        // Update rotation to always face outward from the center
+        ref.current.rotation.y = -angleRef.current;
     });
 
     return (
-        <mesh ref={ref} scale={5}>
+        <mesh ref={ref} scale={0.07}>
             <primitive object={scene} />
         </mesh>
     );

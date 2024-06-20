@@ -1,12 +1,20 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
+import './nav.css';
+
+const withouSidebarRoutes = ["/home","/about","/contact","project"];
 
 const Navbar = () => {
+    const { pathname } = useLocation();
+
+    if (withouSidebarRoutes.some((item) => pathname.includes(item))) 
+
     return (
 
         <header className='header'>
-            <NavLink to="/" className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
-                <p className='blue-gradient_text'>AH</p>
+            <NavLink to="/home" className=" items-center justify-center flex text-lg gap-7 font-medium">
+                <p className='blue-gradient_text name'>Aniruddha</p>
+                {/* Home */}
             </NavLink>
             <nav className='flex text-lg gap-7 font-medium'>
                 <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black-500'}>
@@ -19,6 +27,7 @@ const Navbar = () => {
         </header>
 
     )
+    else return null;
 }
 
 export default Navbar

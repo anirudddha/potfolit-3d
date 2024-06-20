@@ -137,7 +137,7 @@ const Island = ({
       canvas.removeEventListener("touchend", handleTouchEnd);
       canvas.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [gl]);
+  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
 
 
   useFrame(() => {

@@ -16,12 +16,12 @@ const Plane = ({ isRotating, ...props }) => {
     if (isRotating) {
       action.setEffectiveTimeScale(1); // Increase speed
     } else {
-      action.setEffectiveTimeScale(0.5); // Decrease speed
+      action.setEffectiveTimeScale(0.4); // Decrease speed
     }
   }, [actions, isRotating]);
 
   return (
-    <mesh {...props} ref={ref} scale={0.0013} position={[-0.5, -0.5, 3]} rotation={[Math.PI * 2, Math.PI * 2, Math.PI * 2]}>
+    <mesh {...props} ref={ref} scale={0.0013} position={[-0.5, -0.3, 3.5]} rotation={[Math.PI * 2, Math.PI * 2, Math.PI * 2]}>
       <primitive object={scene} />
     </mesh>
   );
