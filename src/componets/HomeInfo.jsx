@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import { arrow } from "../assets/icons";
 
 import './homeinfo.css';

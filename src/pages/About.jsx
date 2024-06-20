@@ -5,7 +5,6 @@ import {skills } from "../constants";
 import leetcode from '../assets/icons/leetcode.png'
 import cf from '../assets/icons/cf.png'
 
-import "react-vertical-timeline-component/style.min.css";
 
 const About = () => {
   return (
