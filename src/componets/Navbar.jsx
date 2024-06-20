@@ -13,7 +13,7 @@ const Navbar = () => {
 
         <header className='header'>
             <NavLink to="/home" className=" items-center justify-center flex text-lg gap-7 font-medium">
-                <p className='blue-gradient_text name'>BlackPerl06</p>
+                <p className='blue-gradient_text name'>aniruddha</p>
             </NavLink>
             <nav className='flex text-lg gap-7 font-medium'>
                 <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black-500'}>
