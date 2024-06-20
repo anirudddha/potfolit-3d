@@ -8,11 +8,11 @@
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 0 2rem; /* Added padding for spacing */
+    padding: 0 2rem;
 }
 
 .welcome-title {
-    font-size: 100px;
+    font-size: 4rem;
     font-weight: bold;
     margin: 0;
 }
@@ -20,7 +20,7 @@
 .welcome-subtitle {
     font-size: 1.5rem;
     margin: 1rem 0;
-    max-width: 800px; /* Limit the width for better readability */
+    max-width: 800px;
 }
 
 .explore-button {
@@ -33,10 +33,73 @@
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-top: 2rem; /* Added margin-top for spacing */
+    margin-top: 2rem;
 }
 
 .explore-button:hover {
-    background-color: #fff; /* Change background color to white */
-    color: #4a00e0; /* Change text color to match original background color */
+    background-color: #fff;
+    color: #4a00e0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Larger Screens */
+@media (min-width: 1200px) {
+    .welcome-title {
+        font-size: 6rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .explore-button {
+        font-size: 1.25rem;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .welcome-title {
+        font-size: 5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .explore-button {
+        font-size: 1.125rem;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 767px) {
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .explore-button {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
+
+    .explore-button {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
 }

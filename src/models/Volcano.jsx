@@ -157,16 +157,12 @@ const Volcano = ({
             <group rotation={[-Math.PI / 2, 0, 0]} scale={0.019}>
                 <group rotation={[Math.PI / 2, 0, 0]}>
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Clouds_Clouds_0.geometry}
                         material={materials.Clouds}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.hammock_hammock_0.geometry}
                         material={materials.hammock}
                         position={[180.509, 1151.676, 5904.325]}
@@ -174,64 +170,48 @@ const Volcano = ({
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Island_Grass_Island_Grass_0.geometry}
                         material={materials.Island_Grass}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100.041}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Lava_bubble_Lava_bubble_0.geometry}
                         material={materials.Lava_bubble}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Ocean_Ocean_0.geometry}
                         material={materials.Ocean}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Palm_tree_1_Palm_tree_1_0.geometry}
                         material={materials.Palm_tree_1}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Palm_tree_2_Palm_tree_2_0.geometry}
                         material={materials.Palm_tree_2}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Pyramid_Pyramid_0.geometry}
                         material={materials.Pyramid}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.shrubbery_shrubbery_0.geometry}
                         material={materials.shrubbery}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.skeleton_skeleton_0.geometry}
                         material={materials.skeleton}
                         position={[3541.67, 1110.094, 3568.021]}
@@ -239,8 +219,6 @@ const Volcano = ({
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Tequila_Bottle_Tequila_Bottle_0.geometry}
                         material={materials.Tequila_Bottle}
                         position={[3492.547, 1112.371, 3620.925]}
@@ -248,32 +226,24 @@ const Volcano = ({
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Volacano_Sand_Volacano_Sand_0.geometry}
                         material={materials.Volacano_Sand}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Volcanic_lava_Volcanic_lava_0.geometry}
                         material={materials.Volcanic_lava}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Volcano_Base_Volcano_Base_0.geometry}
                         material={materials.Volcano_Base}
                         rotation={[-Math.PI / 2, 0, 0]}
                         scale={100.041}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Volcano_Grass_Volcano_Grass_0.geometry}
                         material={materials.Volcano_Grass}
                         rotation={[-Math.PI / 2, 0, 0]}
@@ -282,8 +252,6 @@ const Volcano = ({
                 </group>
             </group>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Object_2.geometry}
                 material={materials.blinn1SG}
                 position={[122.45, -0.145, -46.256]}
@@ -294,14 +262,10 @@ const Volcano = ({
                 <group scale={100}>
                     <group position={[0.293, 0.757, 1.876]} scale={0.047}>
                         <mesh
-                            castShadow
-                            receiveShadow
                             geometry={nodes.FB_M1_Cabin_Boat_2_0.geometry}
                             material={materials.Boat_2}
                         />
                         <mesh
-                            castShadow
-                            receiveShadow
                             geometry={nodes.Ladder_Boat_0.geometry}
                             material={materials.Boat}
                             position={[4.356, 9.628, -23.65]}
@@ -309,8 +273,6 @@ const Volcano = ({
                             scale={15.967}
                         />
                         <mesh
-                            castShadow
-                            receiveShadow
                             geometry={nodes.Lifetorus_Boat_2_0.geometry}
                             material={materials.Boat_2}
                             position={[-6.198, 19.516, -15.467]}
@@ -318,16 +280,12 @@ const Volcano = ({
                             scale={4.376}
                         />
                         <mesh
-                            castShadow
-                            receiveShadow
                             geometry={nodes.Marking_Lights001_Boat_2_0.geometry}
                             material={materials.Boat_2}
                             position={[-6.225, 9.061, -29.645]}
                             scale={21.169}
                         />
                         <mesh
-                            castShadow
-                            receiveShadow
                             geometry={nodes.RadarScanner_Boat_2_0.geometry}
                             material={materials.Boat_2}
                             position={[-6.225, 6.871, 14.109]}
@@ -335,65 +293,47 @@ const Volcano = ({
                         />
                     </group>
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.FB_Medium_Hull_Boat_2_0.geometry}
                         material={materials.Boat_2}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.FB_Medium_Hull_Boat_0.geometry}
                         material={materials.Boat}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.BumpBuoy_Boat_0.geometry}
                         material={materials.Boat}
                         position={[0.674, 1.921, 0.975]}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.BumpBuoy001_Boat_0.geometry}
                         material={materials.Boat}
                         position={[-0.416, 2.342, 0.975]}
                         rotation={[0, 0, -0.289]}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Exhaust_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[0.352, 0.725, 0.481]}
                         rotation={[0, 0.029, 0]}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.FishHole_Boat_2_0.geometry}
                         material={materials.Boat_2}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Lamp_Back_P_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[0.293, 0.758, 1.875]}
                         scale={0.047}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Lamp_Back_S_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[-0.424, 0.774, 1.88]}
                         scale={0.047}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Lamp_Front_P_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[0.319, -1.236, 2.321]}
@@ -401,8 +341,6 @@ const Volcano = ({
                         scale={0.049}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Lamp_Front_S_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[-0.319, -1.236, 2.321]}
@@ -410,8 +348,6 @@ const Volcano = ({
                         scale={0.049}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.MastLadder_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[0.882, -1.281, 1.632]}
@@ -419,15 +355,11 @@ const Volcano = ({
                         scale={[0.695, 0.615, 0.754]}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Propeller_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[0, 2.502, -0.689]}
                     />
                     <mesh
-                        castShadow
-                        receiveShadow
                         geometry={nodes.Rudder_Boat_2_0.geometry}
                         material={materials.Boat_2}
                         position={[0, 2.814, -0.034]}
