@@ -1,6 +1,6 @@
 
 
-import { experiences, skills } from "../constants";
+import {skills } from "../constants";
 
 import leetcode from '../assets/icons/leetcode.png'
 import cf from '../assets/icons/cf.png'
@@ -49,16 +49,16 @@ const About = () => {
       <h3 className='subhead-text my-3'>Achivments in CP</h3>
       <div className="container my-8">
         <h1 style={{ marginTop: "20px" }}>🔵 <img src={leetcode} style={{ height: "200px", margin: "auto" }} alt="" /> </h1>
-        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto", marginTop: "-30px" }}>Knight on Leetcode </h3></p>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><span style={{ margin: "auto", marginTop: "-30px" }}>Knight on Leetcode </span></p>
 
-        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto" }}>Achived in Top 5% on <a href="https://leetcode.com/u/BlackPerl06/" style={{ color: "blue" }}>Leetcode </a> Users  </h3></p>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><span style={{ margin: "auto" }}>Achived in Top 5% on <a href="https://leetcode.com/u/BlackPerl06/" style={{ color: "blue" }}>Leetcode </a> Users  </span></p>
       </div>
       <hr />
       <div className="container my-8">
         <h1 style={{ marginTop: "20px" }}>🔵 <img src={cf} style={{ height: "100px", margin: "auto" }} alt="" /> </h1>
-        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto", marginTop: "-5px" }}>Specialist on CodeForces </h3></p>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><span style={{ margin: "auto", marginTop: "-5px" }}>Specialist on CodeForces </span></p>
 
-        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><h3 style={{ margin: "auto" }}>Achived in Top 1400+ rating on <a href="https://leetcode.com/u/BlackPerl06/" style={{ color: "blue" }}>CodeForces</a>  </h3></p>
+        <p style={{ paddingLeft: "25px", fontSize: "20px", display: "flex", marginTop: "40px" }}><span style={{ margin: "auto" }}>Achived in Top 1400+ rating on <a href="https://leetcode.com/u/BlackPerl06/" style={{ color: "blue" }}>CodeForces</a>  </span></p>
       </div>
       <hr />
 
