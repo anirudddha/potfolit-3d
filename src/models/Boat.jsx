@@ -1,3 +1,6 @@
+// This is for a Plane Model Rotating in eliptical orbit
+
+
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";

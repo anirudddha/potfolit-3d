@@ -1,5 +1,5 @@
 
-import CTA from "../componets/CTA";
+
 import { experiences, skills } from "../constants";
 
 import leetcode from '../assets/icons/leetcode.png'
@@ -63,8 +63,6 @@ const About = () => {
       <hr />
 
       <hr className='border-slate-200' />
-
-      {/* <CTA /> */}
     </section>
   );
 };
