@@ -5,33 +5,32 @@ import Loader from '../componets/Loader'
 import Plane from '../models/Plane'
 import Sky from '../models/Sky'
 import HomeInfo from '../componets/HomeInfo'
-import { soundoff, soundon } from "../assets/icons";
+// import { soundoff, soundon } from "../assets/icons";
 import Volcano from '../models/Volcano'
-import sakura from "../assets/sakura.mp3";
 import { OrbitControls } from '@react-three/drei'
 import Boat from '../models/Boat'
 
 import Birds_together from '../models/Birds_together'
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
-  audioRef.current.loop = true;
+  // const audioRef = useRef(new Audio(sakura));
+  // audioRef.current.volume = 0.4;
+  // audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(3);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
 
-  useEffect(() => {
-    if (isPlayingMusic) {
-      audioRef.current.play();
-    }
+  // useEffect(() => {
+  //   if (isPlayingMusic) {
+  //     audioRef.current.play();
+  //   }
 
-    return () => {
-      audioRef.current.pause();
-    };
-  }, [isPlayingMusic]);
+  //   return () => {
+  //     audioRef.current.pause();
+  //   };
+  // }, [isPlayingMusic]);
 
 
   const adjustIslandForScreenSize = () => {
