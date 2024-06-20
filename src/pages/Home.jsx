@@ -38,7 +38,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGif(false);
-    }, 8000); // Hide GIF after 3 seconds
+    }, 5000); // Hide GIF after 3 seconds
 
     return () => clearTimeout(timer);
   }, []);
