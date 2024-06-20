@@ -69,7 +69,7 @@ const Home = () => {
 
       {showGif && (
         <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center mt-28'>
-          <img src={gifImage} alt='GIF Image' className='max-h-80' />
+          <img src={gifImage} alt='GIF Image' className='max-h-20' />
         </div>
       )}
 
